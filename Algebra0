@@ -1,0 +1,51 @@
+import random
+from sympy import symbols
+
+x, y, m, c = symbols('x y c m')
+
+var_1 = input("Pick a variable: x, y, c, m: ")
+
+if var_1 == "x":
+    y = round(random.uniform(-10,10), 2)
+    m = round(random.uniform(-10,10), 2)
+    c = round(random.uniform(-10,10), 2)
+    print(y ,"=", m, "*","x +",c)
+    ans = float(input("What is x: "))
+    x = round(((y/m)-c), 2)
+    if ans == x:
+        print("x is equal to: ",(y/m)-c, "YES!!!")
+    else:
+        print("BOO, x is actually", x)
+elif var_1 == "y":
+    x = round(random.uniform(-10,10), 2)
+    m = round(random.uniform(-10,10), 2)
+    c = round(random.uniform(-10,10), 2)
+    print("y" ,"=", m, "*", x, "+",c)
+    ans = float(input("What is y: "))
+    y = round(((m*x)+c), 2)
+    if ans == y:
+        print("y is equal to: ",(m*x)+c, "YES!!!")
+    else:
+        print("BOO, y is actually", y)
+elif var_1 == "m":
+    x = round(random.uniform(-10,10), 2)
+    y = round(random.uniform(-10,10), 2)
+    c = round(random.uniform(-10,10), 2)
+    print(y ,"=", "m", "*", x, "+",c)
+    ans = float(input("What is m: "))
+    m = round(((y-c)/x), 2)
+    if ans == m:
+        print("m is equal to: ",(y-c)/x, "YES!!!")
+    else:
+        print("BOO, m is actually", m)
+elif var_1 == "c":
+    x = round(random.uniform(-10,10), 2)
+    m = round(random.uniform(-10,10), 2)
+    y = round(random.uniform(-10,10), 2)
+    print(y ,"=", m, "*", x, "+", "c")
+    ans = float(input("What is c: "))
+    c = round((y-(m*x)), 2)
+    if ans == c:
+        print("c is equal to: ",y-(m*x), "YES!!!")
+    else:
+        print("BOO, c is actually", c)
