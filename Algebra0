@@ -13,7 +13,7 @@ if var_1 == "x":
     ans = float(input("What is x: "))
     x = round(((y/m)-c), 2)
     if ans == x:
-        print("x is equal to: ",(y/m)-c, "YES!!!")
+        print("x is equal to: ", round(((y/m)-c), 2), "YES!!!")
     else:
         print("BOO, x is actually", x)
 elif var_1 == "y":
@@ -24,7 +24,7 @@ elif var_1 == "y":
     ans = float(input("What is y: "))
     y = round(((m*x)+c), 2)
     if ans == y:
-        print("y is equal to: ",(m*x)+c, "YES!!!")
+        print("y is equal to: ",round(((m*x)+c), 2), "YES!!!")
     else:
         print("BOO, y is actually", y)
 elif var_1 == "m":
@@ -33,9 +33,9 @@ elif var_1 == "m":
     c = round(random.uniform(-10,10), 2)
     print(y ,"=", "m", "*", x, "+",c)
     ans = float(input("What is m: "))
-    m = round(((y-c)/x), 2)
+    m = round(((y/x)-c), 2)
     if ans == m:
-        print("m is equal to: ",(y-c)/x, "YES!!!")
+        print("m is equal to: ",round(((y/x)-c), 2), "YES!!!")
     else:
         print("BOO, m is actually", m)
 elif var_1 == "c":
@@ -46,6 +46,6 @@ elif var_1 == "c":
     ans = float(input("What is c: "))
     c = round((y-(m*x)), 2)
     if ans == c:
-        print("c is equal to: ",y-(m*x), "YES!!!")
+        print("c is equal to: ",round((y-(m*x)), 2), "YES!!!")
     else:
         print("BOO, c is actually", c)
